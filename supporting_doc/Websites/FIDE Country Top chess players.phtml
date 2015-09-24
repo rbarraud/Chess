@@ -1,0 +1,727 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="FIDE , Chess, Tournaments, Calendar">
+  <meta name="title" content="Chess Ratings">
+  <meta name="author" content="Administrator">
+  <meta name="description" content="FIDE - World Chess Federation, Online ratings, individual calculations">
+  <link rel="shortcut icon" href="https://ratings.fide.com/favicon.ico">
+
+  <script type="text/javascript" src="FIDE%20Country%20Top%20chess%20players_files/mootools_002.js"></script>
+  <script type="text/javascript" src="FIDE%20Country%20Top%20chess%20players_files/caption.js"></script>
+  <script type="text/javascript" src="FIDE%20Country%20Top%20chess%20players_files/jquery.js"></script>
+
+
+
+  <link href="FIDE%20Country%20Top%20chess%20players_files/rokmoomenu.css" rel="stylesheet" type="text/css">
+  <link href="FIDE%20Country%20Top%20chess%20players_files/template.css" rel="stylesheet" type="text/css">
+  <link href="FIDE%20Country%20Top%20chess%20players_files/style.css" rel="stylesheet" type="text/css">
+
+ <script type="text/javascript" src="FIDE%20Country%20Top%20chess%20players_files/mootools_002.js"></script>
+
+        <script type="text/javascript" src="FIDE%20Country%20Top%20chess%20players_files/rokmoomenu.js"></script>
+
+    <script type="text/javascript" src="FIDE%20Country%20Top%20chess%20players_files/mootools.js"></script>
+    <script type="text/javascript">
+    window.addEvent('domready', function() {
+        new Rokmoomenu($E('ul.menu'), {
+            bgiframe: false,
+            delay: 500,
+            animate: {
+                props: ['opacity'],
+                opts: {
+                    duration:300,
+                    fps: 100,
+                    transition: Fx.Transitions.Quad.easeOut
+                }
+            }
+        });
+    });
+    </script>
+
+   <script type="text/javascript" src="FIDE%20Country%20Top%20chess%20players_files/AC_RunActiveContent.js"></script><script>
+			jQuery(document).ready(function()
+			{
+			jQuery("#r2").html("");
+
+			jQuery(function(){
+        	jQuery('#log_button').on('click', function(e){
+			var username=jQuery("#u1").val();
+			var password=jQuery("#p1").val();
+			var dataString = 'fd_user='+username+'&fd_password='+password;
+			if(jQuery.trim(username).length>0 && jQuery.trim(password).length>0)
+			{
+			jQuery.ajax({
+			type: "POST",
+			url: "login_action.php",
+			data: dataString,
+			cache: false,
+			beforeSend: function(){
+			jQuery("#log_button").val('Connecting...');
+			jQuery("#r2").html("");
+			},
+
+			success: function(data){
+			if(data=="success")
+			{
+
+			window.location.href = location.href;
+			}
+			else
+			{
+
+			jQuery("#log_button").val('Login');
+			jQuery("#r2").html("<span style='color:#cc0000'>Error:</span> <br>Invalid username and password. ");
+			}
+			}
+			});
+
+			}
+			return false;
+			});
+
+			});
+
+			jQuery(function(){
+        	jQuery('#logout_button').on('click', function(e){
+
+			var dataString = 'logout=1';
+
+			jQuery.ajax({
+			type: "POST",
+			url: "login_action.php",
+			data: dataString,
+			cache: false,
+			beforeSend: function(){
+			jQuery("#logout_button").val('Connecting...');
+			jQuery("#r2").html("");
+			},
+
+			success: function(data){
+			if(data=="success")
+			{
+			jQuery("#logout_button").val('Logged out');
+			jQuery("#r2").html("Logout successful<br><a href=https://ratings.fide.com>Click here to login</a>");
+			window.location.href = location.href;
+			}
+			else
+			{
+			//Shake animation effect.
+			jQuery("#log_button").val('Login');
+			jQuery("#r2").html("Session cannot be closed");
+			}
+			}
+			});
+
+
+			return false;
+			});
+
+			});
+			});
+
+</script><title>FIDE Country Top chess players</title>
+
+
+<link href="FIDE%20Country%20Top%20chess%20players_files/socialwidgets.css" type="text/css" rel="stylesheet"></head>
+
+<!-- HEAD BITIS -->
+
+<body>
+<center>
+<div id="frame">
+
+<div id="frame-left"> <!-- frame baslangic -->
+
+<div id="frame-right"> <!-- frame baslangic -->
+
+<div id="wrapper"> <!-- dis cerceve baslangic -->
+
+   <div id="mainpage">
+
+<table class="mainbody" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td>
+
+
+<!-- TOP BAS -->
+      <div id="top">
+
+           <div id="header">
+
+                    <div id="pathway">
+                        <span class="breadcrumbs pathway">
+<a href="http://www.fide.com/" class="pathway">Home</a> <img> <a href="https://ratings.fide.com/"> Chess Ratings </a> <img> Top Federations</span>
+                     </div> <!-- pathway -->
+               
+<div id="ustmenu">
+<div id="horiz-menu">
+                                                                        <ul class="menu">
+                                                                        <li class="item51"><a href="https://www.fide.com/index.php"><span>Home</span></a></li>
+                                                                        <li class="parent" item2=""><a href="https://www.fide.com/fide.html"><span>FIDE</span></a>
+                                                                        <ul>
+                                                                        <li class="parent" item3=""><a href="https://www.fide.com/fide/fide-world-chess-federation.html"><span>FIDE</span></a>
+                                                                        <ul>
+                                                                        <li class="item64"><a href="https://www.fide.com/fide/directory/fide-officials.html?comid=34&amp;task=committee"><span>FIDE Honorary Members</span></a></li>
+                                                                        <li class="item63"><a href="https://www.fide.com/fide/fide-world-chess-federation/fide-presidents.html"><span>FIDE Presidents</span></a></li>
+                                                                        </ul>
+                                                                        </li>
+                                                                        <li class="parent" item30=""><a href="https://www.fide.com/fide/directory.html"><span>Directory</span></a>
+                                                                        <ul>
+                                                                        <li class="item52"><a href="https://www.fide.com/fide/directory/fide-officials.html"><span>FIDE Officials</span></a></li>
+                                                                        <li class="item42"><a href="https://www.fide.com/fide/directory/fide-commissions.html"><span>Commissions</span></a></li>
+                                                                        <li class="item41"><a href="https://www.fide.com/fide/directory/member-federations.html"><span>Member Federations</span></a></li>
+                                                                        <li class="item53"><a href="https://www.fide.com/fide/directory/affiliated-organizations.html"><span>Affiliated Organizations</span></a></li>
+                                                                        </ul>
+                                                                        </li>
+                                                                        <li class="item31"><a href="https://www.fide.com/fide/handbook.html"><span>Handbook</span></a></li>
+                                                                        <li class="item50"><a href="https://www.fide.com/fide/minutes.html"><span>Minutes</span></a></li>
+                                                                        <li class="item55"><a href="https://www.fide.com/fide/fide-anti-doping-regulations.html"><span>FIDE Anti-Doping Regulations</span></a></li>
+                                                                        <li class="item6"><a href="https://www.fide.com/fide/contacts.html"><span>Contacts</span></a></li>
+                                                                        </ul>
+                                                                        </li>
+                                                                        <li class="parent" item8=""><a href="https://www.fide.com/info.html"><span>International Titles</span></a>
+                                                                        <ul><li class="item33"><a href="https://ratings.fide.com/fide_organizers.phtml" target="_blank"><span>Organizers</span></a></li>
+                                                                        <li class="parent" item34=""><a href="https://ratings.fide.com/title_applications.phtml" target="_blank"><span>Titles</span></a>
+                                                                        <ul>
+                                                                        <li class="item58"><a href="https://ratings.fide.com/title_norms.phtml" target="_blank"><span>Title Norms</span></a></li>
+                                                                        <li class="item57"><a href="https://ratings.fide.com/title_applications.phtml" target="_blank"><span>Title Applications</span></a></li>
+                                                                        </ul>
+                                                                        </li>
+                                                                        <li class="item60"><a href="https://ratings.fide.com/fide_arbiters_trainers.phtml" target="_blank"><span>Arbiters / Trainers</span></a></li>
+                                                                        </ul>
+                                                                        </li>
+                                                                        <li class="parent" item7=""><a href="https://www.fide.com/calendar.html"><span>Calendar</span></a>
+                                                                        <ul>
+                                                                        <li class="item20"><a href="https://www.fide.com/calendar/fide-calendar.html"><span>FIDE Events</span></a></li>
+                                                                        <li class="item44"><a href="https://www.fide.com/calendar/fide-archive.html"><span>Events Archive</span></a></li>
+                                                                        <li class="item21"><a href="https://www.fide.com/calendar/tournaments.html"><span>Other Tournaments</span></a></li>
+                                                                        <li class="item61"><a href="https://www.fide.com/component/handbook/?id=44&amp;view=category"><span>Calendar Regulations</span></a></li>
+                                                                        </ul>
+                                                                        </li>
+                                                                        <li class="parent" item9=""><a href="https://ratings.fide.com/" target="_blank"><span>Ratings</span></a>
+                                                                        <ul>
+                                                                        <li class="item22"><a href="https://ratings.fide.com/toplist.phtml" target="_blank"><span>Top Players</span></a></li>
+                                                                        <li class="item23"><a href="https://ratings.fide.com/" target="_blank"><span>All Players</span></a></li>
+                                                                        <li class="item24"><a href="https://ratings.fide.com/fedchange.phtml" target="_blank"><span>Transfers</span></a></li>
+                                                                        <li class="item48"><a href="https://ratings.fide.com/tournament_list.phtml" target="_blank"><span>Tournaments</span></a></li>
+                                                                        <li class="item25"><a href="https://ratings.fide.com/archive.phtml" target="_blank"><span>Archive</span></a></li>
+                                                                        <li class="item26"><a href="https://ratings.fide.com/download.phtml" target="_blank"><span>Download</span></a></li>
+                                                                        <li class="item28"><a href="https://ratings.fide.com/calculators.phtml" target="_blank"><span>Calculators</span></a></li>
+                                                                        </ul>
+                                                                        </li>
+                                                                        </ul>
+                            </div>
+                 </div>
+<div id="langmenu">
+&nbsp;
+</div>
+           </div> <!-- header -->
+
+      </div>  <!-- top -->
+
+</td></tr>
+<tr><td colspan="2">
+<!-- MIDDLE BAS -->
+
+
+ <div id="middle">
+
+  <table class="mainbody" !width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+  <td valign="top">
+
+    <div id="main-col">
+
+
+         <table class="contentpaneopen">
+<tbody><tr>
+		<td class="contentheading" width="100%">
+					Federations	 Ranking		</td>
+
+				<td class="buttonheading" align="right" width="100%">
+				</td>
+
+					</tr>
+</tbody></table>
+
+<table class="contentpaneopen">
+
+<tbody><tr>
+	<td colspan="2" class="createdate" valign="top">
+		</td>
+</tr>
+
+
+<tr>
+<td colspan="2" valign="top">
+<div align="right">
+
+<form action="topfed.phtml" method="GET" class="inputbox"><input name="tops" value="0" checked="checked" calss="inputbox" type="RADIO">&nbsp;<b>Men</b>&nbsp;&nbsp;<input name="tops" value="1" calss="inputbox" type="RADIO">&nbsp;<b>Women</b>&nbsp;&nbsp;|<input name="ina" value="1" checked="checked" class="inputbox" type="RADIO">&nbsp;Active only&nbsp;&nbsp;
+<input name="ina" value="2" class="inputbox" type="RADIO">&nbsp;All&nbsp;
+<select id="country" name="country" size="1" class="inputbox">
+<option selected="selected" value="">Select country</option>
+<option value="AFG">Afghanistan</option>
+
+<option value="ALB">Albania</option>
+
+<option value="ALG">Algeria</option>
+
+<option value="AND">Andorra</option>
+
+<option value="ANG">Angola</option>
+
+<option value="ARG">Argentina</option>
+
+<option value="ARM">Armenia</option>
+
+<option value="ARU">Aruba</option>
+
+<option value="AUS">Australia</option>
+
+<option value="AUT">Austria</option>
+
+<option value="AZE">Azerbaijan</option>
+
+<option value="BAH">Bahamas</option>
+
+<option value="BRN">Bahrain</option>
+
+<option value="BAN">Bangladesh</option>
+
+<option value="BAR">Barbados</option>
+
+<option value="BLR">Belarus</option>
+
+<option value="BEL">Belgium</option>
+
+<option value="BIZ">Belize</option>
+
+<option value="BER">Bermuda</option>
+
+<option value="BHU">Bhutan</option>
+
+<option value="BOL">Bolivia</option>
+
+<option value="BIH">Bosnia &amp; Herzegovina</option>
+
+<option value="BOT">Botswana</option>
+
+<option value="BRA">Brazil</option>
+
+<option value="IVB">British Virgin Islands</option>
+
+<option value="BRU">Brunei Darussalam</option>
+
+<option value="BUL">Bulgaria</option>
+
+<option value="BUR">Burkina Faso</option>
+
+<option value="BDI">Burundi</option>
+
+<option value="CAM">Cambodia</option>
+
+<option value="CMR">Cameroon</option>
+
+<option value="CAN">Canada</option>
+
+<option value="CAF">Central African Republic</option>
+
+<option value="CHI">Chile</option>
+
+<option value="CHN">China</option>
+
+<option value="TPE">Chinese Taipei</option>
+
+<option value="COL">Colombia</option>
+
+<option value="COM">Comoros Islands</option>
+
+<option value="CGO">Congo</option>
+
+<option value="CRC">Costa Rica</option>
+
+<option value="CRO">Croatia</option>
+
+<option value="CUB">Cuba</option>
+
+<option value="CYP">Cyprus</option>
+
+<option value="CZE">Czech Republic</option>
+
+<option value="DEN">Denmark</option>
+
+<option value="DOM">Dominican Republic</option>
+
+<option value="ECU">Ecuador</option>
+
+<option value="EGY">Egypt</option>
+
+<option value="ESA">El Salvador</option>
+
+<option value="ENG">England</option>
+
+<option value="ERI">Eritrea</option>
+
+<option value="EST">Estonia</option>
+
+<option value="ETH">Ethiopia</option>
+
+<option value="FAI">Faroe Islands</option>
+
+<option value="FIJ">Fiji</option>
+
+<option value="FIN">Finland</option>
+
+<option value="MKD">Former YUG Rep of Macedonia</option>
+
+<option value="FRA">France</option>
+
+<option value="GAB">Gabon</option>
+
+<option value="GAM">Gambia</option>
+
+<option value="GEO">Georgia</option>
+
+<option value="GER">Germany</option>
+
+<option value="GHA">Ghana</option>
+
+<option value="GRE">Greece</option>
+
+<option value="GUM">Guam</option>
+
+<option value="GUA">Guatemala</option>
+
+<option value="GCI">Guernsey</option>
+
+<option value="GUY">Guyana</option>
+
+<option value="HAI">Haiti</option>
+
+<option value="HON">Honduras</option>
+
+<option value="HKG">Hong Kong</option>
+
+<option value="HUN">Hungary</option>
+
+<option value="ISL">Iceland</option>
+
+<option value="IND">India</option>
+
+<option value="INA">Indonesia</option>
+
+<option value="IRI">Iran</option>
+
+<option value="IRQ">Iraq</option>
+
+<option value="IRL">Ireland</option>
+
+<option value="ISR">Israel</option>
+
+<option value="ITA">Italy</option>
+
+<option value="CIV">Ivory Coast</option>
+
+<option value="JAM">Jamaica</option>
+
+<option value="JPN">Japan</option>
+
+<option value="JCI">Jersey</option>
+
+<option value="JOR">Jordan</option>
+
+<option value="KAZ">Kazakhstan</option>
+
+<option value="KEN">Kenya</option>
+
+<option value="KOS">Kosovo</option>
+
+<option value="KUW">Kuwait</option>
+
+<option value="KGZ">Kyrgyzstan</option>
+
+<option value="LAO">Laos</option>
+
+<option value="LAT">Latvia</option>
+
+<option value="LIB">Lebanon</option>
+
+<option value="LES">Lesotho</option>
+
+<option value="LBA">Libya</option>
+
+<option value="LIE">Liechtenstein</option>
+
+<option value="LTU">Lithuania</option>
+
+<option value="LUX">Luxembourg</option>
+
+<option value="MAC">Macau</option>
+
+<option value="MAD">Madagascar</option>
+
+<option value="MAW">Malawi</option>
+
+<option value="MAS">Malaysia</option>
+
+<option value="MDV">Maldives</option>
+
+<option value="MLI">Mali</option>
+
+<option value="MLT">Malta</option>
+
+<option value="MTN">Mauritania</option>
+
+<option value="MRI">Mauritius</option>
+
+<option value="MEX">Mexico</option>
+
+<option value="MDA">Moldova</option>
+
+<option value="MNC">Monaco</option>
+
+<option value="MGL">Mongolia</option>
+
+<option value="MNE">Montenegro</option>
+
+<option value="MAR">Morocco</option>
+
+<option value="MOZ">Mozambique</option>
+
+<option value="MYA">Myanmar</option>
+
+<option value="NAM">Namibia</option>
+
+<option value="NRU">Nauru</option>
+
+<option value="NEP">Nepal</option>
+
+<option value="NED">Netherlands</option>
+
+<option value="AHO">Netherlands Antilles</option>
+
+<option value="NZL">New Zealand</option>
+
+<option value="NCA">Nicaragua</option>
+
+<option value="NGR">Nigeria</option>
+
+<option value="NOR">Norway</option>
+
+<option value="OMA">Oman</option>
+
+<option value="PAK">Pakistan</option>
+
+<option value="PLW">Palau</option>
+
+<option value="PLE">Palestine</option>
+
+<option value="PAN">Panama</option>
+
+<option value="PNG">Papua New Guinea</option>
+
+<option value="PAR">Paraguay</option>
+
+<option value="PER">Peru</option>
+
+<option value="PHI">Philippines</option>
+
+<option value="POL">Poland</option>
+
+<option value="POR">Portugal</option>
+
+<option value="PUR">Puerto Rico</option>
+
+<option value="QAT">Qatar</option>
+
+<option value="ROU">Romania</option>
+
+<option value="RUS">Russia</option>
+
+<option value="RWA">Rwanda</option>
+
+<option value="SMR">San Marino</option>
+
+<option value="STP">Sao Tome and Principe</option>
+
+<option value="KSA">Saudi Arabia</option>
+
+<option value="SCO">Scotland</option>
+
+<option value="SEN">Senegal</option>
+
+<option value="SRB">Serbia</option>
+
+<option value="SEY">Seychelles</option>
+
+<option value="SLE">Sierra Leone</option>
+
+<option value="SIN">Singapore</option>
+
+<option value="SVK">Slovakia</option>
+
+<option value="SLO">Slovenia</option>
+
+<option value="SOL">Solomon Islands</option>
+
+<option value="SOM">Somalia</option>
+
+<option value="RSA">South Africa</option>
+
+<option value="KOR">South Korea</option>
+
+<option value="ESP">Spain</option>
+
+<option value="SRI">Sri Lanka</option>
+
+<option value="SUD">Sudan</option>
+
+<option value="SUR">Suriname</option>
+
+<option value="SWZ">Swaziland</option>
+
+<option value="SWE">Sweden</option>
+
+<option value="SUI">Switzerland</option>
+
+<option value="SYR">Syria</option>
+
+<option value="TJK">Tajikistan</option>
+
+<option value="TAN">Tanzania</option>
+
+<option value="THA">Thailand</option>
+
+<option value="TLS">Timor-Leste</option>
+
+<option value="TOG">Togo</option>
+
+<option value="TTO">Trinidad &amp; Tobago</option>
+
+<option value="TUN">Tunisia</option>
+
+<option value="TUR">Turkey</option>
+
+<option value="TKM">Turkmenistan</option>
+
+<option value="UGA">Uganda</option>
+
+<option value="UKR">Ukraine</option>
+
+<option value="UAE">United Arab Emirates</option>
+
+<option value="USA">United States of America</option>
+
+<option value="URU">Uruguay</option>
+
+<option value="ISV">US Virgin Islands</option>
+
+<option value="UZB">Uzbekistan</option>
+
+<option value="VEN">Venezuela</option>
+
+<option value="VIE">Vietnam</option>
+
+<option value="WLS">Wales</option>
+
+<option value="YEM">Yemen</option>
+
+<option value="ZAM">Zambia</option>
+
+<option value="ZIM">Zimbabwe</option>
+</select>&nbsp;<input title="Submit" value="go" class="inputbox" type="Submit"></form></div>
+
+&nbsp;<a href="https://ratings.fide.com/topfed.phtml">All players</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://ratings.fide.com/topfed.phtml?tops=1">Women</a><br><br>&nbsp;Select the country to see the list of the top players for the given country<br><br><table bgcolor="white" border="0" cellpadding="2" cellspacing="2" align="center" width="550"><tbody><tr><td colspan="7"><h4>&nbsp;</h4>  <b>Country rank by average rating of top 10 players</b></td></tr><tr><td colspan="2" align="right">&nbsp;</td><td>Average</td><td>GMs</td><td>IMs</td><td>Total Titled</td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">1</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=RUS">Russia</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2740</b></td><td bgcolor="#F9DBDB" align="center"><b>230</b></td><td bgcolor="#F9DBDB" align="center"><b>519</b></td><td bgcolor="#F9DBDB" align="center"><b>2361</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">2</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=CHN">China</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2716</b></td><td bgcolor="#F9DBDB" align="center"><b>36</b></td><td bgcolor="#F9DBDB" align="center"><b>32</b></td><td bgcolor="#F9DBDB" align="center"><b>141</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">3</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=USA">United States of America</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2698</b></td><td bgcolor="#F9DBDB" align="center"><b>89</b></td><td bgcolor="#F9DBDB" align="center"><b>132</b></td><td bgcolor="#F9DBDB" align="center"><b>678</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">4</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=UKR">Ukraine</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2684</b></td><td bgcolor="#F9DBDB" align="center"><b>86</b></td><td bgcolor="#F9DBDB" align="center"><b>198</b></td><td bgcolor="#F9DBDB" align="center"><b>520</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">5</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=IND">India</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2668</b></td><td bgcolor="#F9DBDB" align="center"><b>38</b></td><td bgcolor="#F9DBDB" align="center"><b>83</b></td><td bgcolor="#F9DBDB" align="center"><b>274</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">6</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=FRA">France</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2654</b></td><td bgcolor="#F9DBDB" align="center"><b>49</b></td><td bgcolor="#F9DBDB" align="center"><b>103</b></td><td bgcolor="#F9DBDB" align="center"><b>393</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">7</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=ARM">Armenia</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2645</b></td><td bgcolor="#F9DBDB" align="center"><b>37</b></td><td bgcolor="#F9DBDB" align="center"><b>27</b></td><td bgcolor="#F9DBDB" align="center"><b>108</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">8</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=AZE">Azerbaijan</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2645</b></td><td bgcolor="#F9DBDB" align="center"><b>24</b></td><td bgcolor="#F9DBDB" align="center"><b>22</b></td><td bgcolor="#F9DBDB" align="center"><b>112</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">9</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=HUN">Hungary</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2639</b></td><td bgcolor="#F9DBDB" align="center"><b>52</b></td><td bgcolor="#F9DBDB" align="center"><b>117</b></td><td bgcolor="#F9DBDB" align="center"><b>445</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">10</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=POL">Poland</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2634</b></td><td bgcolor="#F9DBDB" align="center"><b>40</b></td><td bgcolor="#F9DBDB" align="center"><b>102</b></td><td bgcolor="#F9DBDB" align="center"><b>359</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">11</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=ISR">Israel</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2633</b></td><td bgcolor="#F9DBDB" align="center"><b>41</b></td><td bgcolor="#F9DBDB" align="center"><b>52</b></td><td bgcolor="#F9DBDB" align="center"><b>179</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">12</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=ENG">England</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2633</b></td><td bgcolor="#F9DBDB" align="center"><b>35</b></td><td bgcolor="#F9DBDB" align="center"><b>59</b></td><td bgcolor="#F9DBDB" align="center"><b>261</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">13</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=NED">Netherlands</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2630</b></td><td bgcolor="#F9DBDB" align="center"><b>33</b></td><td bgcolor="#F9DBDB" align="center"><b>82</b></td><td bgcolor="#F9DBDB" align="center"><b>318</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">14</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=GER">Germany</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2622</b></td><td bgcolor="#F9DBDB" align="center"><b>87</b></td><td bgcolor="#F9DBDB" align="center"><b>244</b></td><td bgcolor="#F9DBDB" align="center"><b>1271</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">15</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=BUL">Bulgaria</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2592</b></td><td bgcolor="#F9DBDB" align="center"><b>36</b></td><td bgcolor="#F9DBDB" align="center"><b>55</b></td><td bgcolor="#F9DBDB" align="center"><b>142</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">16</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=ESP">Spain</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2589</b></td><td bgcolor="#F9DBDB" align="center"><b>45</b></td><td bgcolor="#F9DBDB" align="center"><b>112</b></td><td bgcolor="#F9DBDB" align="center"><b>550</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">17</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=GEO">Georgia</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2587</b></td><td bgcolor="#F9DBDB" align="center"><b>28</b></td><td bgcolor="#F9DBDB" align="center"><b>36</b></td><td bgcolor="#F9DBDB" align="center"><b>120</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">18</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=CUB">Cuba</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2585</b></td><td bgcolor="#F9DBDB" align="center"><b>20</b></td><td bgcolor="#F9DBDB" align="center"><b>45</b></td><td bgcolor="#F9DBDB" align="center"><b>305</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">19</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=CRO">Croatia</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2584</b></td><td bgcolor="#F9DBDB" align="center"><b>31</b></td><td bgcolor="#F9DBDB" align="center"><b>61</b></td><td bgcolor="#F9DBDB" align="center"><b>250</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">20</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=CZE">Czech Republic</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2582</b></td><td bgcolor="#F9DBDB" align="center"><b>31</b></td><td bgcolor="#F9DBDB" align="center"><b>77</b></td><td bgcolor="#F9DBDB" align="center"><b>289</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">21</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=SRB">Serbia</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2576</b></td><td bgcolor="#F9DBDB" align="center"><b>54</b></td><td bgcolor="#F9DBDB" align="center"><b>115</b></td><td bgcolor="#F9DBDB" align="center"><b>576</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">22</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=BLR">Belarus</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2566</b></td><td bgcolor="#F9DBDB" align="center"><b>17</b></td><td bgcolor="#F9DBDB" align="center"><b>26</b></td><td bgcolor="#F9DBDB" align="center"><b>98</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">23</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=NOR">Norway</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2562</b></td><td bgcolor="#F9DBDB" align="center"><b>11</b></td><td bgcolor="#F9DBDB" align="center"><b>30</b></td><td bgcolor="#F9DBDB" align="center"><b>117</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">24</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=ROU">Romania</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2560</b></td><td bgcolor="#F9DBDB" align="center"><b>19</b></td><td bgcolor="#F9DBDB" align="center"><b>83</b></td><td bgcolor="#F9DBDB" align="center"><b>283</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">25</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=TUR">Turkey</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2553</b></td><td bgcolor="#F9DBDB" align="center"><b>9</b></td><td bgcolor="#F9DBDB" align="center"><b>20</b></td><td bgcolor="#F9DBDB" align="center"><b>120</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">26</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=GRE">Greece</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2552</b></td><td bgcolor="#F9DBDB" align="center"><b>13</b></td><td bgcolor="#F9DBDB" align="center"><b>22</b></td><td bgcolor="#F9DBDB" align="center"><b>118</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">27</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=ARG">Argentina</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2539</b></td><td bgcolor="#F9DBDB" align="center"><b>22</b></td><td bgcolor="#F9DBDB" align="center"><b>72</b></td><td bgcolor="#F9DBDB" align="center"><b>258</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">28</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=SWE">Sweden</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2538</b></td><td bgcolor="#F9DBDB" align="center"><b>20</b></td><td bgcolor="#F9DBDB" align="center"><b>37</b></td><td bgcolor="#F9DBDB" align="center"><b>161</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">29</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=DEN">Denmark</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2536</b></td><td bgcolor="#F9DBDB" align="center"><b>12</b></td><td bgcolor="#F9DBDB" align="center"><b>36</b></td><td bgcolor="#F9DBDB" align="center"><b>130</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">30</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=LAT">Latvia</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2534</b></td><td bgcolor="#F9DBDB" align="center"><b>12</b></td><td bgcolor="#F9DBDB" align="center"><b>13</b></td><td bgcolor="#F9DBDB" align="center"><b>54</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">31</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=ITA">Italy</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2529</b></td><td bgcolor="#F9DBDB" align="center"><b>11</b></td><td bgcolor="#F9DBDB" align="center"><b>42</b></td><td bgcolor="#F9DBDB" align="center"><b>218</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">32</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=ISL">Iceland</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2528</b></td><td bgcolor="#F9DBDB" align="center"><b>13</b></td><td bgcolor="#F9DBDB" align="center"><b>12</b></td><td bgcolor="#F9DBDB" align="center"><b>56</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">33</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=BRA">Brazil</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2521</b></td><td bgcolor="#F9DBDB" align="center"><b>11</b></td><td bgcolor="#F9DBDB" align="center"><b>31</b></td><td bgcolor="#F9DBDB" align="center"><b>196</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">34</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=BIH">Bosnia &amp; Herzegovina</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2519</b></td><td bgcolor="#F9DBDB" align="center"><b>9</b></td><td bgcolor="#F9DBDB" align="center"><b>24</b></td><td bgcolor="#F9DBDB" align="center"><b>96</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">35</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=SLO">Slovenia</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2518</b></td><td bgcolor="#F9DBDB" align="center"><b>12</b></td><td bgcolor="#F9DBDB" align="center"><b>21</b></td><td bgcolor="#F9DBDB" align="center"><b>110</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">36</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=PER">Peru</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2518</b></td><td bgcolor="#F9DBDB" align="center"><b>6</b></td><td bgcolor="#F9DBDB" align="center"><b>11</b></td><td bgcolor="#F9DBDB" align="center"><b>65</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">37</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=KAZ">Kazakhstan</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2505</b></td><td bgcolor="#F9DBDB" align="center"><b>15</b></td><td bgcolor="#F9DBDB" align="center"><b>33</b></td><td bgcolor="#F9DBDB" align="center"><b>139</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">38</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=SVK">Slovakia</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2505</b></td><td bgcolor="#F9DBDB" align="center"><b>10</b></td><td bgcolor="#F9DBDB" align="center"><b>27</b></td><td bgcolor="#F9DBDB" align="center"><b>108</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">39</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=UZB">Uzbekistan</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2504</b></td><td bgcolor="#F9DBDB" align="center"><b>12</b></td><td bgcolor="#F9DBDB" align="center"><b>9</b></td><td bgcolor="#F9DBDB" align="center"><b>58</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">40</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=VIE">Vietnam</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2501</b></td><td bgcolor="#F9DBDB" align="center"><b>9</b></td><td bgcolor="#F9DBDB" align="center"><b>12</b></td><td bgcolor="#F9DBDB" align="center"><b>129</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">41</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=CAN">Canada</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2500</b></td><td bgcolor="#F9DBDB" align="center"><b>10</b></td><td bgcolor="#F9DBDB" align="center"><b>35</b></td><td bgcolor="#F9DBDB" align="center"><b>171</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">42</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=AUT">Austria</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2498</b></td><td bgcolor="#F9DBDB" align="center"><b>7</b></td><td bgcolor="#F9DBDB" align="center"><b>47</b></td><td bgcolor="#F9DBDB" align="center"><b>222</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">43</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=IRI">Iran</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2497</b></td><td bgcolor="#F9DBDB" align="center"><b>10</b></td><td bgcolor="#F9DBDB" align="center"><b>18</b></td><td bgcolor="#F9DBDB" align="center"><b>77</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">44</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=SUI">Switzerland</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2496</b></td><td bgcolor="#F9DBDB" align="center"><b>8</b></td><td bgcolor="#F9DBDB" align="center"><b>38</b></td><td bgcolor="#F9DBDB" align="center"><b>140</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">45</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=PHI">Philippines</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2486</b></td><td bgcolor="#F9DBDB" align="center"><b>14</b></td><td bgcolor="#F9DBDB" align="center"><b>27</b></td><td bgcolor="#F9DBDB" align="center"><b>84</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">46</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=BEL">Belgium</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2483</b></td><td bgcolor="#F9DBDB" align="center"><b>6</b></td><td bgcolor="#F9DBDB" align="center"><b>22</b></td><td bgcolor="#F9DBDB" align="center"><b>95</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">47</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=EGY">Egypt</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2480</b></td><td bgcolor="#F9DBDB" align="center"><b>4</b></td><td bgcolor="#F9DBDB" align="center"><b>28</b></td><td bgcolor="#F9DBDB" align="center"><b>67</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">48</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=LTU">Lithuania</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2473</b></td><td bgcolor="#F9DBDB" align="center"><b>8</b></td><td bgcolor="#F9DBDB" align="center"><b>18</b></td><td bgcolor="#F9DBDB" align="center"><b>56</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">49</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=MDA">Moldova</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2469</b></td><td bgcolor="#F9DBDB" align="center"><b>6</b></td><td bgcolor="#F9DBDB" align="center"><b>23</b></td><td bgcolor="#F9DBDB" align="center"><b>73</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">50</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=CHI">Chile</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2461</b></td><td bgcolor="#F9DBDB" align="center"><b>4</b></td><td bgcolor="#F9DBDB" align="center"><b>12</b></td><td bgcolor="#F9DBDB" align="center"><b>68</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">51</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=AUS">Australia</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2453</b></td><td bgcolor="#F9DBDB" align="center"><b>4</b></td><td bgcolor="#F9DBDB" align="center"><b>30</b></td><td bgcolor="#F9DBDB" align="center"><b>148</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">52</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=MKD">Former YUG Rep of Macedonia</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2449</b></td><td bgcolor="#F9DBDB" align="center"><b>9</b></td><td bgcolor="#F9DBDB" align="center"><b>10</b></td><td bgcolor="#F9DBDB" align="center"><b>47</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">53</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=MNE">Montenegro</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2449</b></td><td bgcolor="#F9DBDB" align="center"><b>6</b></td><td bgcolor="#F9DBDB" align="center"><b>16</b></td><td bgcolor="#F9DBDB" align="center"><b>62</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">54</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=COL">Colombia</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2444</b></td><td bgcolor="#F9DBDB" align="center"><b>5</b></td><td bgcolor="#F9DBDB" align="center"><b>35</b></td><td bgcolor="#F9DBDB" align="center"><b>181</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">55</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=EST">Estonia</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2441</b></td><td bgcolor="#F9DBDB" align="center"><b>5</b></td><td bgcolor="#F9DBDB" align="center"><b>13</b></td><td bgcolor="#F9DBDB" align="center"><b>45</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">56</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=FIN">Finland</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2440</b></td><td bgcolor="#F9DBDB" align="center"><b>5</b></td><td bgcolor="#F9DBDB" align="center"><b>21</b></td><td bgcolor="#F9DBDB" align="center"><b>111</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">57</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=MEX">Mexico</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2430</b></td><td bgcolor="#F9DBDB" align="center"><b>5</b></td><td bgcolor="#F9DBDB" align="center"><b>30</b></td><td bgcolor="#F9DBDB" align="center"><b>194</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">58</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=INA">Indonesia</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2429</b></td><td bgcolor="#F9DBDB" align="center"><b>6</b></td><td bgcolor="#F9DBDB" align="center"><b>17</b></td><td bgcolor="#F9DBDB" align="center"><b>113</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">59</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=MGL">Mongolia</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2427</b></td><td bgcolor="#F9DBDB" align="center"><b>4</b></td><td bgcolor="#F9DBDB" align="center"><b>8</b></td><td bgcolor="#F9DBDB" align="center"><b>66</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">60</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=VEN">Venezuela</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2416</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>21</b></td><td bgcolor="#F9DBDB" align="center"><b>130</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">61</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=SCO">Scotland</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2412</b></td><td bgcolor="#F9DBDB" align="center"><b>6</b></td><td bgcolor="#F9DBDB" align="center"><b>9</b></td><td bgcolor="#F9DBDB" align="center"><b>39</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">62</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=POR">Portugal</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2404</b></td><td bgcolor="#F9DBDB" align="center"><b>3</b></td><td bgcolor="#F9DBDB" align="center"><b>14</b></td><td bgcolor="#F9DBDB" align="center"><b>48</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">63</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=TKM">Turkmenistan</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2394</b></td><td bgcolor="#F9DBDB" align="center"><b>5</b></td><td bgcolor="#F9DBDB" align="center"><b>7</b></td><td bgcolor="#F9DBDB" align="center"><b>47</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">64</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=IRL">Ireland</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2394</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>7</b></td><td bgcolor="#F9DBDB" align="center"><b>30</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">65</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=PAR">Paraguay</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2387</b></td><td bgcolor="#F9DBDB" align="center"><b>4</b></td><td bgcolor="#F9DBDB" align="center"><b>4</b></td><td bgcolor="#F9DBDB" align="center"><b>25</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">66</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=SIN">Singapore</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2384</b></td><td bgcolor="#F9DBDB" align="center"><b>3</b></td><td bgcolor="#F9DBDB" align="center"><b>13</b></td><td bgcolor="#F9DBDB" align="center"><b>68</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">67</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=BAN">Bangladesh</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2378</b></td><td bgcolor="#F9DBDB" align="center"><b>5</b></td><td bgcolor="#F9DBDB" align="center"><b>3</b></td><td bgcolor="#F9DBDB" align="center"><b>34</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">68</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=ECU">Ecuador</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2358</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>13</b></td><td bgcolor="#F9DBDB" align="center"><b>58</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">69</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=ALB">Albania</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2340</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>6</b></td><td bgcolor="#F9DBDB" align="center"><b>20</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">70</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=ALG">Algeria</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2335</b></td><td bgcolor="#F9DBDB" align="center"><b>2</b></td><td bgcolor="#F9DBDB" align="center"><b>10</b></td><td bgcolor="#F9DBDB" align="center"><b>50</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">71</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=LUX">Luxembourg</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2324</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>4</b></td><td bgcolor="#F9DBDB" align="center"><b>14</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">72</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=URU">Uruguay</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2322</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>5</b></td><td bgcolor="#F9DBDB" align="center"><b>32</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">73</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=IRQ">Iraq</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2320</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>6</b></td><td bgcolor="#F9DBDB" align="center"><b>69</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">74</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=DOM">Dominican Republic</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2312</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>6</b></td><td bgcolor="#F9DBDB" align="center"><b>29</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">75</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=CRC">Costa Rica</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2308</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>6</b></td><td bgcolor="#F9DBDB" align="center"><b>27</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">76</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=MAR">Morocco</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2308</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>5</b></td><td bgcolor="#F9DBDB" align="center"><b>28</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">77</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=TJK">Tajikistan</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2307</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>4</b></td><td bgcolor="#F9DBDB" align="center"><b>7</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">78</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=TUN">Tunisia</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2305</b></td><td bgcolor="#F9DBDB" align="center"><b>2</b></td><td bgcolor="#F9DBDB" align="center"><b>4</b></td><td bgcolor="#F9DBDB" align="center"><b>26</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">79</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=MNC">Monaco</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2302</b></td><td bgcolor="#F9DBDB" align="center"><b>3</b></td><td bgcolor="#F9DBDB" align="center"><b>2</b></td><td bgcolor="#F9DBDB" align="center"><b>17</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">80</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=RSA">South Africa</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2302</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>8</b></td><td bgcolor="#F9DBDB" align="center"><b>91</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">81</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=NZL">New Zealand</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2297</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>6</b></td><td bgcolor="#F9DBDB" align="center"><b>42</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">82</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=FAI">Faroe Islands</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2297</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>3</b></td><td bgcolor="#F9DBDB" align="center"><b>11</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">83</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=MYA">Myanmar</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2292</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>4</b></td><td bgcolor="#F9DBDB" align="center"><b>33</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">84</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=WLS">Wales</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2279</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>5</b></td><td bgcolor="#F9DBDB" align="center"><b>22</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">85</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=MAS">Malaysia</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2278</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>5</b></td><td bgcolor="#F9DBDB" align="center"><b>42</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">86</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=ZAM">Zambia</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2274</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>7</b></td><td bgcolor="#F9DBDB" align="center"><b>22</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">87</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=KGZ">Kyrgyzstan</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2270</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>6</b></td><td bgcolor="#F9DBDB" align="center"><b>15</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">88</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=NGR">Nigeria</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2259</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>5</b></td><td bgcolor="#F9DBDB" align="center"><b>27</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">89</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=UAE">United Arab Emirates</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2257</b></td><td bgcolor="#F9DBDB" align="center"><b>2</b></td><td bgcolor="#F9DBDB" align="center"><b>5</b></td><td bgcolor="#F9DBDB" align="center"><b>48</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">90</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=SYR">Syria</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2257</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>4</b></td><td bgcolor="#F9DBDB" align="center"><b>19</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">91</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=KOS">Kosovo</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2233</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>4</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">92</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=BOL">Bolivia</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2232</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>2</b></td><td bgcolor="#F9DBDB" align="center"><b>33</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">93</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=JPN">Japan</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2231</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>3</b></td><td bgcolor="#F9DBDB" align="center"><b>22</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">94</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=NCA">Nicaragua</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2222</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>3</b></td><td bgcolor="#F9DBDB" align="center"><b>26</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">95</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=ESA">El Salvador</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2218</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>3</b></td><td bgcolor="#F9DBDB" align="center"><b>27</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">96</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=GUA">Guatemala</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2212</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>2</b></td><td bgcolor="#F9DBDB" align="center"><b>20</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">97</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=ANG">Angola</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2208</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>9</b></td><td bgcolor="#F9DBDB" align="center"><b>29</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">98</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=UGA">Uganda</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2205</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>2</b></td><td bgcolor="#F9DBDB" align="center"><b>17</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">99</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=THA">Thailand</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2203</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>15</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">100</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=JOR">Jordan</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2202</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>2</b></td><td bgcolor="#F9DBDB" align="center"><b>24</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">101</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=ZIM">Zimbabwe</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2187</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>5</b></td><td bgcolor="#F9DBDB" align="center"><b>9</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">102</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=YEM">Yemen</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2186</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>5</b></td><td bgcolor="#F9DBDB" align="center"><b>16</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">103</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=LIB">Lebanon</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2184</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>2</b></td><td bgcolor="#F9DBDB" align="center"><b>18</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">104</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=HON">Honduras</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2173</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>21</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">105</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=PAN">Panama</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2167</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>18</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">106</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=PUR">Puerto Rico</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2155</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>2</b></td><td bgcolor="#F9DBDB" align="center"><b>28</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">107</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=BRU">Brunei Darussalam</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2148</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>3</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">108</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=JAM">Jamaica</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2146</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>26</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">109</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=BOT">Botswana</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2136</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>21</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">110</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=TTO">Trinidad &amp; Tobago</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2133</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>24</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">111</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=AND">Andorra</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2128</b></td><td bgcolor="#F9DBDB" align="center"><b>2</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>8</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">112</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=KOR">South Korea</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2126</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>15</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">113</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=CYP">Cyprus</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2126</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>8</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">114</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=MLI">Mali</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2117</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>2</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">115</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=BAR">Barbados</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2111</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>3</b></td><td bgcolor="#F9DBDB" align="center"><b>13</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">116</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=SRI">Sri Lanka</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2106</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>45</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">117</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=MLT">Malta</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2097</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>15</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">118</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=PAK">Pakistan</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2094</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>2</b></td><td bgcolor="#F9DBDB" align="center"><b>8</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">119</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=NEP">Nepal</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2087</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>13</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">120</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=KEN">Kenya</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2087</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>10</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">121</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=LBA">Libya</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2085</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>12</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">122</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=SUD">Sudan</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2083</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>10</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">123</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=PLE">Palestine</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2071</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>8</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">124</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=LIE">Liechtenstein</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2070</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>5</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">125</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=MAD">Madagascar</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2067</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>8</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">126</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=BER">Bermuda</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2057</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>5</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">127</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=HKG">Hong Kong</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2037</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>15</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">128</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=GAM">Gambia</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2036</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>3</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">129</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=MAW">Malawi</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2019</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>6</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">130</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=SMR">San Marino</a></b></td><td bgcolor="#F9DBDB" align="center"><b>2015</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>6</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">131</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=HAI">Haiti</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1995</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>2</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">132</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=GCI">Guernsey</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1990</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>6</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">133</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=AFG">Afghanistan</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1988</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>4</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">134</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=SUR">Suriname</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1984</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>17</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">135</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=JCI">Jersey</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1969</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>7</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">136</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=KUW">Kuwait</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1966</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>5</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">137</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=ETH">Ethiopia</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1955</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>2</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">138</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=OMA">Oman</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1951</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>3</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">139</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=BRN">Bahrain</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1947</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>5</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">140</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=PNG">Papua New Guinea</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1943</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>5</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">141</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=MRI">Mauritius</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1937</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>3</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">142</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=SEY">Seychelles</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1911</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>3</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">143</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=KSA">Saudi Arabia</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1908</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">144</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=ARU">Aruba</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1897</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>10</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">145</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=MTN">Mauritania</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1885</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>7</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">146</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=CIV">Ivory Coast</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1884</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>2</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">147</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=SLE">Sierra Leone</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1876</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>2</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">148</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=CMR">Cameroon</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1861</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>4</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">149</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=TPE">Chinese Taipei</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1852</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>9</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">150</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=GHA">Ghana</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1850</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>4</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">151</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=AHO">Netherlands Antilles</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1847</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>9</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">152</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=SOM">Somalia</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1846</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">153</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=GAB">Gabon</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1845</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">154</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=GUM">Guam</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1836</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">155</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=FIJ">Fiji</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1818</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>11</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">156</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=GUY">Guyana</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1781</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>2</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">157</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=MDV">Maldives</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1759</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>4</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">158</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=PLW">Palau</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1748</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">159</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=QAT">Qatar</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1742</b></td><td bgcolor="#F9DBDB" align="center"><b>3</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td><td bgcolor="#F9DBDB" align="center"><b>13</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">160</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=NAM">Namibia</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1739</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>6</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">161</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=TAN">Tanzania</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1726</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>1</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">162</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=TOG">Togo</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1720</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>4</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">163</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=RWA">Rwanda</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1715</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>3</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">164</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=BDI">Burundi</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1672</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">165</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=BAH">Bahamas</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1670</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>4</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">166</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=MOZ">Mozambique</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1659</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>7</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">167</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=STP">Sao Tome and Principe</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1650</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>2</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">168</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=LES">Lesotho</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1606</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">169</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=MAC">Macau</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1494</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>8</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">170</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=BHU">Bhutan</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1386</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">171</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=SWZ">Swaziland</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1363</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td></tr><tr><td bgcolor="#E4E4E4" align="center"><b><font color="red">172</font></b></td><td bgcolor="#E4E4E4"><b><a href="https://ratings.fide.com/topfed.phtml?ina=1&amp;country=LAO">Laos</a></b></td><td bgcolor="#F9DBDB" align="center"><b>1338</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td><td bgcolor="#F9DBDB" align="center"><b>0</b></td></tr></tbody></table><br>
+
+</td>
+</tr>
+
+</tbody></table>
+<span class="article_separator">&nbsp;</span>
+
+<p align="center">
+<b><a href="javascript:history.go(-1)">«&nbsp;go back</a> </b>
+</p>
+
+
+     </div>
+
+
+
+  </td>
+  <td align="right" valign="top"><div id="login_div">
+<b>LOG IN</b><br>
+<form>
+<input name="fd_user" id="u1" class="inputbox" size="20" maxlength="100" type="text"><br>
+<b>PASSWORD</b><br>
+<input name="fd_password" id="p1" class="inputbox" size="20" maxlength="100" type="password"><br>
+<input size="3" value="Login" class="inputbox" id="log_button" height="1" type="submit"><br>
+</form>
+</div>
+<div id="r2"></div>
+
+<img src="FIDE%20Country%20Top%20chess%20players_files/head3.jpg" border="0" align="absbottom" hspace="0" vspace="0">
+<ul class="links">
+<li><a href="https://ratings.fide.com/toplist.phtml">Top Players</a></li>
+<li><a href="https://ratings.fide.com/topfed.phtml">Top Countries</a></li>
+<li><a href="https://ratings.fide.com/topstat.phtml">Top Chart</a></li>
+<li><a href="https://ratings.fide.com/index.phtml">Players &amp; Arbiters</a></li>
+<li><a href="https://ratings.fide.com/fedchange.phtml">Transfers</a></li>
+<li><a href="https://ratings.fide.com/tournament_list.phtml">Tournaments</a></li>
+<li><a href="https://ratings.fide.com/archive.phtml">Tournaments Archive</a></li>
+<li><a href="https://ratings.fide.com/download.phtml">Download Rating List</a></li>
+<li><a href="https://ratings.fide.com/calculators.phtml">Rating Calculators</a></li>
+</ul>
+
+<br>
+<a href="http://arena.fide.com/" target="_blank"><img src="FIDE%20Country%20Top%20chess%20players_files/foa_140.gif" border="0" align="absbottom" hspace="0" vspace="0"></a><a>
+
+<p align="right">
+<b>Share this page</b></p>
+</a><img title="PrivacyBadger has replaced this AddThis button." class="privacyBadgerReplacementButton" src="FIDE%20Country%20Top%20chess%20players_files/AddThis.svg">
+
+<script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
+<script type="text/javascript" src="FIDE%20Country%20Top%20chess%20players_files/addthis_widget.js"></script>
+
+<p></p>
+<br>
+
+&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://www.facebook.com/pages/FIDE-World-Chess-Federation/198487910190049"><img alt="facebook" src="FIDE%20Country%20Top%20chess%20players_files/facebook.png" height="32" width="32"></a>
+&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://twitter.com/fide_chess"><img alt="twitter" src="FIDE%20Country%20Top%20chess%20players_files/twitter.png" height="32" width="32"></a>
+&nbsp;&nbsp;&nbsp;<a target="_blank" href="https://plus.google.com/101000466239905858098/posts"><img alt="gplus" src="FIDE%20Country%20Top%20chess%20players_files/gplus.png" height="32" width="32"></a>
+
+
+</td>
+</tr>
+<tr><td colspan="2"><div style="height:30px;"></div></td></tr>
+<tr><td style="text-align:center;border-top:1px solid #f2f2f2;color:#757771;font-size:10px;font-family:arial;letter-spacing:0px;background:#ffffff;line-height:20px;" colspan="2">
+©&nbsp;2015&nbsp;World Chess Federation
+&nbsp;&nbsp;
+|&nbsp;&nbsp;Contact us: <a href="mailto:admin@fide.com">admin@fide.com</a>&nbsp;&nbsp;
+|&nbsp;&nbsp;Developed and supported by Elista FIDE Office&nbsp;&nbsp;
+|&nbsp;&nbsp; Ratings questions:  <a href="mailto:ratings@fide.com">Elista FIDE Office</a>&nbsp;&nbsp;
+</td></tr>
+
+</tbody></table>
+
+
+<!-------------------------------------------------------->
+  </div> <!-- main page-->
+ <!-- dis cerceve bitis -->
+ <!-- frame -right bitis -->
+ <!-- frame -bottom bitis -->
+
+  <!-- frame bitis -->
+
+   
+<script src="FIDE%20Country%20Top%20chess%20players_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-4113616-2";
+urchinTracker();
+</script>
+
+   
+</td></tr></tbody></table></div></div></div></div></div></center></body></html>

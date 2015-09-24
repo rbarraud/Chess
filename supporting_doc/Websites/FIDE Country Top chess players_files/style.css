@@ -1,0 +1,304 @@
+div#frame {
+
+ width: 980px;
+ height: 100%;
+ margin-top:0px;
+ position: relative;  
+ left: 0;
+ top: 0;
+ padding-top:0px;
+
+}
+
+div#frame-right {
+
+ width: 980px;
+ height: 100%;
+ margin-top:0px;
+ background: url("/mod_images/frame_right_bg.gif") 100% 20% repeat-y;
+ position: relative;  
+ left: 0;
+ top: 0;
+ padding-top:0px;
+ border:0px solid #cccccc; 
+
+}
+div#frame-left {
+
+ width: 980px;
+ height: 100%;
+ margin-top:0px;
+ background: url("/mod_images/frame_left_bg.gif")  0 0 repeat-y;
+ position: relative;  
+ left: 0px;
+ top: 0;
+ padding-top:0px;
+ border:0px solid #cccccc; 
+
+}
+
+div#wrapper {
+
+ /*width: 915px;*/
+ width: 930px;
+ height: 100%;
+ background: #fff;
+ margin-top:0px;
+
+ position: relative;  
+ left: 0;
+ top: 0;
+ padding:0px;
+ border:1px solid #cccccc; 
+
+}
+div#mainpage {
+
+ /*width: 907px;*/
+ width: 917px;
+ height: 100%;
+ background: #fff;
+ margin-top:0px;
+ position: relative;  
+ left: 0;
+ top: 0;
+ padding:0px; 
+/* border: 1px solid maroon; */
+
+}
+
+div#middle {
+  /*  width:900px;*/
+    width:910px;
+    height:100%;
+    margin-left: 0px;
+    margin-top: 0px;
+    position: relative;  
+    left: 0;
+    top: 0;
+    float: left;
+    padding:0px;
+    /*border: 1px solid #333333;*/
+ }
+div#main-col {
+  /*  width:680px;*/
+    width:700px;
+    /*width:99%;*/
+    height:100%;
+    background: #fff;;
+    margin-left: 4px;
+    margin-right:0px;
+    margin-top: 0px;
+    position: relative;  
+    left: 0;
+    top: 0;
+    float: left;
+    vertical-align: top;
+    padding:0px;
+    text-align:left;
+    /*border: 1px solid #333333;*/
+ }
+div#right-col {
+    width:210px;
+    height:100%;
+    background: #fff;
+    vertical-align: top;
+    margin-left: 0px;
+    margin-top: 0px;
+    position: relative;  
+    left: 0;
+    top: 0;
+    float: left;
+    padding:0px;
+    overflow:hidden;
+      
+ }
+
+ div#top {
+    width:900px;
+    height:auto;
+    margin-left: 3px;
+    margin-top: 17px;
+    margin-bottom:13px;
+    position: relative;  
+    left: 0;
+    top: 0;
+    float: left;
+    padding:0px;
+   /* border: 1px solid #333333;*/
+    z-index: 50; 
+ }
+
+div#header {
+    position: relative;
+    left: 0;
+    top: 0;
+    float: left;
+    width: 910px;
+    height: 126px;                          
+    background: url("/mod_images/fideust_son.jpg") 0 0 no-repeat;
+    margin-left: 0px;
+    margin-top: 0px;
+
+}
+    
+#langmenu {
+  /*  padding-left:100px;
+    margin-left: 100px;
+*/
+  /*  margin-top:-10px;*/
+ 
+     padding:0;
+     margin-top:-20px;
+   position: relative;
+    left: -10px;
+    font-weight:normal;
+    color:#f1f1f1;
+    font-size:10px;
+    border: 0px solid yellow;
+    width:100px;
+  /*  top: -10px;*/
+    float:right;
+}
+
+#ustmenu {
+    padding-right:20px;
+    padding-bottom:20px;
+        position: relative;
+    left: 0;
+    /*top: -10;*/
+}
+#ustmenu a {
+    color: #f1f1f1 ;
+    font-weight:bold;
+    font-family: tahoma,arial ;
+    font-size: 12px;
+    letter-spacing:0px;
+    padding-right:20px;
+/*    padding-bottom:2px;*/
+}
+
+#ustmenu a:hover {
+    color: #D6DADD;
+    text-decoration: none;
+        font-weight: bold;
+
+}
+
+/**------------------- TOP MENU ---------------------*/
+/* @group Horizontal Menu */
+
+#horiz-menu a {
+    color: #d7d9dc;
+    font-weight: bold;
+   /* border-right: 1px solid #fafafa;*/
+}
+
+#horiz-menu li:hover a,
+#horiz-menu li.sfHover a,
+#horiz-menu li:hover a.topdaddy,
+#horiz-menu li.sfHover a.topdaddy,
+#horiz-menu a.topdaddy:hover,
+#horiz-menu li li:hover a:hover,
+#horiz-menu li li.sfHover a:hover {
+    /*color: #ccc;*/
+    color: #66A8E3;
+}
+
+#horiz-menu li:hover li a,
+#horiz-menu li.sfHover li a,
+#horiz-menu li.active:hover a,
+#horiz-menu li.active.sfHover a {
+    color: #f1f1f1;
+
+}
+
+#horiz-menu li.active,
+#horiz-menu.splitmenu li.active:hover,
+#horiz-menu.splitmenu li.active.sfHover,
+#horiz-menu li.active.parent:hover,
+#horiz-menu li.active.parent.sfHover,
+#horiz-menu li.active:hover,
+#horiz-menu li.active.sfHover {
+/*    background: url(../images/style2/active-tab-r.png) 100% 0 no-repeat;*/
+background: #334166;
+    
+}
+
+#horiz-menu li.active a ,
+#horiz-menu.splitmenu li.active:hover a,
+#horiz-menu.splitmenu li.active.sfHover a,
+#horiz-menu li.active.parent:hover a,
+#horiz-menu li.active.parent.sfHover a,
+#horiz-menu li.active:hover a,
+#horiz-menu li.active.sfHover a {
+    /*background: url(../images/style2/active-tab-l.png) 0 0 no-repeat;*/
+        font-weight: bold;
+}
+
+#horiz-menu li:hover a,
+#horiz-menu li.sfHover a,
+#horiz-menu li.parent:hover,
+#horiz-menu li.parent.sfHover {
+    /*background: url(../images/style2/over-tab.png) 0 0 no-repeat;*/
+    /*color: #18C5F8;*/
+    color: #66A8E3;    
+}
+
+#horiz-menu li li a:hover {
+    color: #ccc;
+}
+
+#horiz-menu li.active a {
+    color: #fff; 
+   
+}
+
+#horiz-menu li li.parent a.daddy,
+#horiz-menu li.active li.parent a.daddy {
+    background: url("/mod_images/dropdown-child.png") 95% 50% no-repeat;
+}
+
+#horiz-menu li li, 
+#horiz-menu li:hover li,
+#horiz-menu li.sfHover li,
+#horiz-menu li.parent:hover li,
+#horiz-menu li.parent.sfHover li,
+#horiz-menu li.active.parent:hover li,
+#horiz-menu li.active.parent.sfHover li {
+    background: url("/mod_images/dropdown-div.png") 0 100% repeat-x;
+   /* border-bottom: 2px inset #425484;*/
+
+    }
+
+#horiz-menu ul ul {
+    background: #334166  url("/mod_images/dropdown-top.png") 0 0 no-repeat;
+  /*  background: #334166;*/
+    /*border-left: 1px solid #434A4E;
+    border-right: 1px solid #434A4E;*/
+}
+
+#horiz-menu ul ul ul {
+/*    background: #4E5558;
+    border-left: 1px solid #434A4E;
+    border-right: 1px solid #434A4E; */
+}
+
+/* @end */
+
+/* @group Submenu */
+
+ul.menuside a,
+ul.menuside li.active li a {
+    color: #ccc;
+}
+
+ul.menuside li.active a,
+ul.menuside a:hover,
+ul.menuside li.active li a:hover {
+    color: #fff;
+}
+
+/* @end */
+
+
